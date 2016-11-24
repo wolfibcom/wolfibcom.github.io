@@ -4,12 +4,10 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+![My helpful screenshot]({{ site.url }}/images/smallCar4.jpg)
 
-### More Information
+I am a software engineer from Vienna, Austria with a university degree in Molecular Biology / Bioinformatics and have most recently been working as a Product Manager for [Roche Diagnostics](http://www.roche.com/about/business/diagnostics.htm). I am currently on educational leave to focus 100% on improving my software development skills. At the moment I am visiting the [Computational Genomics Lab](https://cgl.genomics.ucsc.edu/) at the University of California Santa Cruz where I am working on the [visualization of graph genomes](https://github.com/wolfib/sequenceTubeMap).
 
-A place to include any other types of information that you'd like to include about yourself.
+When I'm not working I enjoy being outdoors and dabble in various kinds of water and mountain sports.
 
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+Feel free to contact me via [email](mailto:{{ site.footer-links.email }}) or on [Twitter](https://twitter.com/{{ site.footer-links.twitter }}).
