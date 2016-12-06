@@ -123,14 +123,14 @@ img {
 }
 
 // Specify the color of the selection
-::-moz-selection {
+/*::-moz-selection {
   color: $black;
   background: $lightGray;
 }
 ::selection {
   color: $black;
   background: $lightGray;
-}
+}*/
 
 // Nicolas Gallagher's micro clearfix hack
 // http://nicolasgallagher.com/micro-clearfix-hack/
@@ -284,7 +284,7 @@ nav {
   }
 
   .read-more {
-    text-transform: uppercase;
+    //text-transform: uppercase;
     font-size: 15px;
   }
 }
@@ -292,6 +292,23 @@ nav {
 .post-meta {
     font-size: 14px;
     color: $gray;
+}
+
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
+
+.image-wrapper {
+    text-align: center;
+    //border: 1px solid black;
+
+    .image-caption {
+        color: $gray;
+        margin-top: 5px;
+        font-size: 13px;
+    }
 }
 
 .wrapper-footer {

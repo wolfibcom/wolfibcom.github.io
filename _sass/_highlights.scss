@@ -3,23 +3,30 @@
   background-color: #efefef;
   padding: 7px 7px 7px 10px;
   border: 1px solid #ddd;
-  -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
-  box-shadow: 3px 3px rgba(0,0,0,0.1);
+  //-moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
+  //-webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
+  //box-shadow: 3px 3px rgba(0,0,0,0.1);
   margin: 20px 0 20px 0;
-  overflow: scroll;
+  //overflow: scroll;
 }
 
 code {
-  font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+  //font-family: 'Ubuntu Mono', monospace;
+  //font-family: 'Source Code Pro', monospace;
+  font-family: 'Droid Sans Mono', monospace;
+  font-size: 14px;
+  //font-family: 'Roboto Mono', monospace;
+  //font-family: 'Bitstream Vera Sans Mono','Courier', monospace;
 }
 
-.highlight .c { color: #586E75 } /* Comment */
+//.highlight .c { color: #586E75 } /* Comment */
+.highlight .c { color: #93A1A1 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
 .highlight .g { color: #93A1A1 } /* Generic */
 .highlight .k { color: #859900 } /* Keyword */
 .highlight .l { color: #93A1A1 } /* Literal */
-.highlight .n { color: #93A1A1 } /* Name */
+//.highlight .n { color: #93A1A1 } /* Name */
+.highlight .n { color: #586E75 } /* Name */
 .highlight .o { color: #859900 } /* Operator */
 .highlight .x { color: #CB4B16 } /* Other */
 .highlight .p { color: #93A1A1 } /* Punctuation */
@@ -55,7 +62,8 @@ code {
 .highlight .ne { color: #CB4B16 } /* Name.Exception */
 .highlight .nf { color: #268BD2 } /* Name.Function */
 .highlight .nl { color: #93A1A1 } /* Name.Label */
-.highlight .nn { color: #93A1A1 } /* Name.Namespace */
+//.highlight .nn { color: #93A1A1 } /* Name.Namespace */
+.highlight .nn { color: #586E75 } /* Name.Namespace */
 .highlight .nx { color: #555 } /* Name.Other */
 .highlight .py { color: #93A1A1 } /* Name.Property */
 .highlight .nt { color: #268BD2 } /* Name.Tag */
