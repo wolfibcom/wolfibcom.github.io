@@ -209,6 +209,16 @@ Usually an approach somewhere in the middle between those two extremes delivers 
 Here the first line of code picks `batch_size` random indices between 0 and the size of the training set. Then the batches are built by picking the images and labels at these indices.
 
 {% highlight python %}
+# Periodically print out the model's current accuracy
+if i % 100 == 0:
+  train_accuracy = sess.run(accuracy, feed_dict={
+    images_placeholder: images_batch, labels_placeholder: labels_batch})
+  print('Step {:5d}: training accuracy {:g}'.format(i, train_accuracy))
+{% endhighlight %}
+
+Every 100 iterations we check the model's current accuracy on the training data batch. To do this, we just need to call the accuracy-operation we defined earlier.
+
+{% highlight python %}
 # Perform a single training step
 sess.run(train_step, feed_dict={images_placeholder: images_batch,
   labels_placeholder: labels_batch})
@@ -217,16 +227,6 @@ sess.run(train_step, feed_dict={images_placeholder: images_batch,
 This is the most important line in the training loop. We tell the model to perform a single training step. We don't need to restate what the model needs to do in order to be able to make a parameter update. All the info has been provided in the definition of the TensorFlow graph already. TensorFlow knows that the gradient descent update depends on knowing the `loss`, which depends on the `logits` which depend on `weights`, `biases` and the actual input batch.
 
 We therefore only need to feed the batch of training data to the model. This is done by providing a feed dictionary in which the batch of training data is assigned to the placeholders we defined earlier.
-
-{% highlight python %}
-# Periodically print out the model's current accuracy
-if (i + 1) % 100 == 0:
-  train_accuracy = sess.run(accuracy, feed_dict={
-    images_placeholder: images_batch, labels_placeholder: labels_batch})
-  print('Step {:5d}: training accuracy {:g}'.format(i, train_accuracy))
-{% endhighlight %}
-
-Every 100 iterations we check the model's current accuracy on the training data batch. To do this, we just need to call the accuracy-operation we defined earlier.
 
 {% highlight python %}
 # After finishing the training, evaluate on the test set
@@ -245,28 +245,28 @@ print('Total time: {:5.2f}s'.format(endTime - beginTime))
 
 The final lines simply print out how long it took to train and run the model.
 
-# Results
+## Results
 
 Let's run the model with with the command "`python softmax.py`". Here is how my output looks like:
 
 {% highlight python %}
-Step   100: training accuracy 0.43
-Step   200: training accuracy 0.41
-Step   300: training accuracy 0.34
-Step   400: training accuracy 0.3
-Step   500: training accuracy 0.3
-Step   600: training accuracy 0.47
-Step   700: training accuracy 0.48
-Step   800: training accuracy 0.44
-Step   900: training accuracy 0.38
-Step  1000: training accuracy 0.46
-Test accuracy 0.2943
-Total time:  7.64s
+Step     0: training accuracy 0.14
+Step   100: training accuracy 0.32
+Step   200: training accuracy 0.3
+Step   300: training accuracy 0.23
+Step   400: training accuracy 0.26
+Step   500: training accuracy 0.31
+Step   600: training accuracy 0.44
+Step   700: training accuracy 0.33
+Step   800: training accuracy 0.23
+Step   900: training accuracy 0.31
+Test accuracy 0.3066
+Total time: 12.42s
 {% endhighlight %}
 
-What does this mean? The accuracy of evaluating the trained model on the test set is about 29%. If you run the code yourself, your result will probably be around 25-30%. So our model is able to pick the correct label for an image it has never seen before around 25-30% of the time. That's not bad! There are 10 different labels, so random guessing would result in an accuracy of 10%. Our very simple method is already way better than guessing randomly. If you think that 25% still sounds pretty low, don't forget that the model is still pretty dumb. It has no notion of actual image features like lines or even shapes. It looks strictly at the color of each pixel individually, completely independent from other pixels. An image shifted by a single pixel would represent a completely different input to this model. Considering this, 25% doesn't look too shabby to me anymore.
+What does this mean? The accuracy of evaluating the trained model on the test set is about 31%. If you run the code yourself, your result will probably be around 25-30%. So our model is able to pick the correct label for an image it has never seen before around 25-30% of the time. That's not bad! There are 10 different labels, so random guessing would result in an accuracy of 10%. Our very simple method is already way better than guessing randomly. If you think that 25% still sounds pretty low, don't forget that the model is still pretty dumb. It has no notion of actual image features like lines or even shapes. It looks strictly at the color of each pixel individually, completely independent from other pixels. An image shifted by a single pixel would represent a completely different input to this model. Considering this, 25% doesn't look too shabby to me anymore.
 
-What would happen if we trained for more iterations? That would probably not improve the model's accuracy. If you look at results, you can see that the training accuracy is not steadily increasing, but instead fluctuating between 0.30 and 0.48. It seems to be the case that we have reached this model's limit and seeing more training data would not help. This models is simply not able to deliver better results. In fact, instead of training for 1000 iterations, we would have gotten a similar accuracy after significantly fewer iterations.
+What would happen if we trained for more iterations? That would probably not improve the model's accuracy. If you look at results, you can see that the training accuracy is not steadily increasing, but instead fluctuating between 0.23 and 0.44. It seems to be the case that we have reached this model's limit and seeing more training data would not help. This models is simply not able to deliver better results. In fact, instead of training for 1000 iterations, we would have gotten a similar accuracy after significantly fewer iterations.
 
 One last thing you probably noticed: the test accuracy is quite a lot lower than the training accuracy. If this gap is quite big, this is often a sign of overfitting. The model is then more finely tuned to the training data it has seen, and it is not able to generalize as well to previously unseen data.
 
