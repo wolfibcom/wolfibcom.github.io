@@ -376,7 +376,7 @@ This line runs the `train_step` operation (defined previously to call `two_layer
 
 When training a model takes a longer period of time, there is an easy way to save a snapshot of your progress. This allows you to come back later and restore the model in exactly the same state. All you need to do is to create a `tf.train.Saver` object (we did that earlier) and then call its `save()` method every time you want to take a snapshot.
 
-Restoring a model is just as easy, just call the saver's `restore()` method. There is a working code example showing how to do this in the file `restore_model.py`(TODO: add Link) in the github repository.
+Restoring a model is just as easy, just call the saver's `restore()` method. There is a working code example showing how to do this in the file [`restore_model.py`](https://github.com/wolfib/image-classification-CIFAR10-tf/blob/master/restore_model.py) in the github repository.
 
 {% highlight python %}
   # After finishing the training, evaluate on the test set
