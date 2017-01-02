@@ -41,7 +41,7 @@ And that's already the end of my very brief part on the theory of neural network
 
 ## The Code
 
-The full code for this example is [available on Github](https://github.com/wolfib/image-classification-CIFAR10-tf). It requires TensorFlow and the CIFAR-10 dataset (see Part 1 on how to install the prerequisites).
+The full code for this example is [available on Github](https://github.com/wolfib/image-classification-CIFAR10-tf). It requires TensorFlow and the CIFAR-10 dataset (see [Part 1]({% post_url 2016-12-5-Image-Recognition-Intro-Part-1 %}#prerequisites)) on how to install the prerequisites).
 
 If you've made your way through my previous blog post, you'll see that the code for the neural network classifier is pretty similar to the code for the softmax classifier. But in addition to switching out the part of the code that defines the model, I've added a couple of small features to show some of the things TensorFlow can do:
 
@@ -98,7 +98,7 @@ The definition of the `weights` variable is a bit more involved. We use `tf.get_
 
 The final parameter for the `weights` variable is the `regularizer`. All we have to do at this point is to tell TensorFlow we want to use L2-regularization for the `weights` variable. I'll cover regularization [here](#regularization).
 
-To create the first layer's output we multiply the `images` matrix and the `weights` matrix witch each other and add the `bias` variable. This is exactly the same as in the softmax classifier from the previous blog post. Then we apply `tf.nn.relu()`, the ReLU function to arrive at the hidden layer's output.
+To create the first layer's output we multiply the `images` matrix and the `weights` matrix witch each other and add the `bias` variable. This is exactly the same as in the softmax classifier from the [previous blog post]({% post_url 2016-12-5-Image-Recognition-Intro-Part-1 %}). Then we apply `tf.nn.relu()`, the ReLU function to arrive at the hidden layer's output.
 
 {% highlight python %}
   # Layer 2

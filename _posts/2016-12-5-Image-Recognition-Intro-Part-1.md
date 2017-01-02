@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Build a Simple Image Recognition System with TensorFlow
+title: How to Build a Simple Image Recognition System with TensorFlow Part 1
 title-img: images/frog_title_image.png
 ---
 
@@ -48,7 +48,7 @@ After the training has finished, the model's parameter values don't change anymo
 [TensorFlow](https://www.tensorflow.org) is a open source software library for machine learning, which was released by Google in 2015 and has quickly become one of the most popular machine learning libraries being used by researchers and practitioners all over the world. We use it to do the numerical heavy lifting for our image classification model.
 
 ## Building the Model, a Softmax Classifier
-The full code for this model is [available on Github](https://github.com/wolfib/image-classification-CIFAR10-tf). In order to use it, you need to have the following installed:
+<a name="prerequisites" />The full code for this model is [available on Github](https://github.com/wolfib/image-classification-CIFAR10-tf). In order to use it, you need to have the following installed:
 
 * Python (the code has been tested with Python 2.7, but Python 3.3+ should work too, [Link to Installation Instructions](https://wiki.python.org/moin/BeginnersGuide/Download))
 * TensorFlow ([Link to Installation Instructions](https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html))
@@ -270,4 +270,4 @@ What would happen if we trained for more iterations? That would probably not imp
 
 One last thing you probably noticed: the test accuracy is quite a lot lower than the training accuracy. If this gap is quite big, this is often a sign of overfitting. The model is then more finely tuned to the training data it has seen, and it is not able to generalize as well to previously unseen data.
 
-This post has turned out to be quite long already. I'd like to thank you for reading it all (or for skipping right to the bottom)! I hope you found something of interest to you, whether it's how a machine learning classifier works or how to build and run a simple graph with TensorFlow. Of course, there is still a lot of material that I would like to add. So far, we have only talked about the softmax classifier, which isn't even using any neural nets. My plan for the next part is to change that, and to find out how much using a small neural network model can improve the results.
+This post has turned out to be quite long already. I'd like to thank you for reading it all (or for skipping right to the bottom)! I hope you found something of interest to you, whether it's how a machine learning classifier works or how to build and run a simple graph with TensorFlow. Of course, there is still a lot of material that I would like to add. So far, we have only talked about the softmax classifier, which isn't even using any neural nets. My [next blog post]({% post_url 2016-12-5-Image-Recognition-Intro-Part-1 %}) changes that: Find out how much using a small neural network model can improve the results!
