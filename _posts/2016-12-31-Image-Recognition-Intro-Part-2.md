@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Build a Simple Image Recognition System with TensorFlow Part 2
+title: How to Build a Simple Image Recognition System with TensorFlow (Part 2)
 title-img: images/cat_title_image.png
 ---
 

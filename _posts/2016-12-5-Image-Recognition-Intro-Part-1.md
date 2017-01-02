@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Build a Simple Image Recognition System with TensorFlow Part 1
+title: How to Build a Simple Image Recognition System with TensorFlow (Part 1)
 title-img: images/frog_title_image.png
 ---
 
