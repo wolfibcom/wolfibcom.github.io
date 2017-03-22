@@ -6,7 +6,7 @@ permalink: /about/
 
 ![mugshot]({{ site.url }}/images/smallCar4.jpg)
 
-I am a software engineer from Vienna, Austria with a university degree in Molecular Biology/Bioinformatics and have most recently been working as a Product Manager for [Roche Diagnostics](http://www.roche.com/about/business/diagnostics.htm). I am currently on educational leave to focus 100% on improving my software development skills. At the moment I am visiting the [Computational Genomics Lab](https://cgl.genomics.ucsc.edu/) at the University of California Santa Cruz where I am working on the [visualization of graph genomes](https://github.com/wolfib/sequenceTubeMap).
+I am a software engineer from Vienna, Austria with a university degree in Molecular Biology/Bioinformatics. I am currently on educational leave from my previous job as a Product Manager for [Roche Diagnostics](http://www.roche.com/about/business/diagnostics.htm) in order to focus 100% on improving my software development skills. During this time I have been visiting the [Computational Genomics Lab](https://cgl.genomics.ucsc.edu/) at the University of California Santa Cruz where I was working on the [visualization of graph genomes](https://github.com/wolfib/sequenceTubeMap). Now that I am back home in Vienna I am continuing this work remotely.
 
 When I'm not working I enjoy being outdoors and dabble in various kinds of water and mountain sports.
 
