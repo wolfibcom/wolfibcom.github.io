@@ -19,6 +19,10 @@ code {
   //font-family: 'Bitstream Vera Sans Mono','Courier', monospace;
 }
 
+pre {
+  overflow: auto;
+}
+
 //.highlight .c { color: #586E75 } /* Comment */
 .highlight .c { color: #93A1A1 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
